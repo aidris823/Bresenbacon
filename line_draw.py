@@ -74,11 +74,15 @@ def draw_line_eight(x0,y0,x1,y1,screen,color):
 screen = new_screen()
 color = [0,98,51]
 draw_line(0,600,350,500,screen,color)
+plot(screen,[255,255,255],100,600)
+
 draw_line(400,600,0,600,screen,color)
 draw_line(0,600,400,600,screen,color)
-#draw_line(200,0,50,500,screen,color)
-#draw_line(200,0,550,500,screen,color)
-#draw_line(400,600,50,500,screen,color)
+
+draw_line(200,0,50,500,screen,color)
+draw_line(200,0,550,500,screen,color)
+draw_line(0,500,0,250,screen,color)
+draw_line(400,600,50,500,screen,color)
 display(screen)
 save_extension(screen,'img.png')
 
