@@ -2,14 +2,14 @@ from subprocess import Popen, PIPE
 from os import remove
 
 #constants
-XRES = 500
-YRES = 500
+XRES = 1000
+YRES = 750
 MAX_COLOR = 255
 RED = 0
 GREEN = 1
 BLUE = 2
 
-DEFAULT_COLOR = [0, 0, 0]
+DEFAULT_COLOR = [193,39,45]
 
 def new_screen( width = XRES, height = YRES ):
     screen = []
@@ -56,4 +56,4 @@ def display( screen ):
     save_ppm( screen, ppm_name )
     p = Popen( ['display', ppm_name], stdin=PIPE, stdout = PIPE )
     p.communicate()
-remove(ppm_name)
+    remove(ppm_name)
